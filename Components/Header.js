@@ -33,7 +33,7 @@ export default function Header() {
                 </button>
             </div>
 
-            <div className="hidden lg:grid lg:grid-rows-6 lg:gap-2 lg:items-center lg:w-full lg:top-0 lg:justify-end">
+            <div className="hidden lg:grid lg:grid-rows-7  lg:items-center lg:w-full lg:top-0 lg:justify-end">
                 <div className="row-span-2 flex items-center justify-around text-sm lg:bg-black lg:bg-opacity-5 shadow-md p-1">
                     <Link href="https://maps.app.goo.gl/A4d2BGtvpwWJdkKj9" className="flex items-center gap-2" target="_blank" rel="noopener noreferrer">
                         <LocationIcon className="w-6 h-6" />
@@ -52,7 +52,7 @@ export default function Header() {
                     </Link>
                 </div>
 
-                <nav className="row-span-4 flex flex-col lg:flex-row lg:items-center text-base gap-6 lg:gap-12 mt-4 lg:mt-0 lg:me-4">
+                <nav className="row-span-4 flex flex-col lg:flex-row lg:items-center text-base gap-6 lg:gap-12 mt-4 lg:mt-4 lg:me-4">
                     <Link href="/" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/')}`}>HOME</Link>
                     <Link href="/gallery" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/gallery')}`}>GALLERY</Link>
                     <Link href="/facilities" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/facilities')}`}>FACILITIES</Link>

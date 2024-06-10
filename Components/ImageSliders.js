@@ -17,7 +17,7 @@ const ImageSliders = ({ sliders }) => {
 
   return (
     <AnimatedBox>
-      <div className="w-full h-full lg:h-screen">
+      <div className="w-full h-full">
         <Zoom {...zoomInProperties}>
           {sliders.map((slider, sliderIndex) => (
             <div key={sliderIndex} className="relative flex flex-col w-full h-full lg:h-screen">

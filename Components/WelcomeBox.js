@@ -16,7 +16,7 @@ const WelcomeBox = () => {
         <AnimatedText text="Supervision" className='text-red-600' />
         <AnimatedText text="Academy" className='text-black' />
     </div>
-    <div className='text-balance'>
+    <div className=''>
         <AnimatedText text='The Mission of The Golden Supervision Academy is to
         empower our children to achieve their greatest potential both as
         students and as members of their communities.'/>

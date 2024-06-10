@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { Montserrat } from 'next/font/google'
 import {  useRouter } from "next/router";
 import Footer from "@/Components/Footer";
+import Head from "next/head";
  
 const montserrat = Montserrat({
   subsets : ["latin"],
@@ -13,6 +14,13 @@ const montserrat = Montserrat({
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
+    <>
+       <Head>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href={"/logo2.png"} type="image/svg+xml" />
+        
+    </Head>
     <main className={`${montserrat.variable} font-mont w-full min-h-screen`}>
       <Header />
        <AnimatePresence mode='wait'>
@@ -20,5 +28,6 @@ export default function App({ Component, pageProps }) {
       </AnimatePresence>
       <Footer />
     </main>
+    </>
   )
 }
