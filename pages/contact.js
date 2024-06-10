@@ -1,7 +1,5 @@
 import AnimatedBox from '@/Components/AnimatedBox'
 import ContactForm from '@/Components/ContactForm'
-import Footer from '@/Components/Footer'
-import Header from '@/Components/Header'
 import { CallIcon2, LocationIcon2, MessageIcon2 } from '@/Components/Icons'
 import MapBox from '@/Components/MapBox'
 import Link from 'next/link'
@@ -10,7 +8,7 @@ import React from 'react'
 const contact = () => {
   return (
     <>
-    <Header />
+
      <div className='flex  flex-col-reverse lg:flex-row lg:py-3'>
        
         <div>
@@ -71,7 +69,7 @@ const contact = () => {
         
         <ContactForm />
      </div>
-     <Footer />
+  
     </>
    
   )

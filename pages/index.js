@@ -1,13 +1,12 @@
 
 import PrincipalMessage from "@/Components/PrincipalMessage";
-import Header from "@/Components/Header";
 import ImageSliders from "@/Components/ImageSliders";
 import WelcomeBox from "@/Components/WelcomeBox";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Slider } from "@/models/slider";
 import ContactForm from "@/Components/ContactForm";
 import ArticlesBox from "@/Components/ArticlesBox";
-import Footer from "@/Components/Footer";
+
 import MapBox from "@/Components/MapBox";
 
 import { Article } from "@/models/article";
@@ -25,7 +24,7 @@ export default function HomePage({sliders, articles, notice}){
 
   return(
     <div>
-     <Header />
+    
      <div className="flex flex-col"> 
         <ImageSliders key={sliders._id} sliders={sliders}  />
         <WelcomeBox />
@@ -50,7 +49,7 @@ export default function HomePage({sliders, articles, notice}){
     </div>
   </div>
 </div>
-       <Footer />
+      
       </div>
       {notice && (
         <NoticeModal isOpen={isModalOpen} closeModal={closeModal} notice={notice} />

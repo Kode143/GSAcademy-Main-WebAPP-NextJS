@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { mongooseConnect } from "@/lib/mongoose";
 import { Article } from '@/models/article'
-import Header from '@/Components/Header';
-import Footer from '@/Components/Footer';
 import { ClockIcon } from '@/Components/Icons';
 import AnimatedText from '@/Components/AnimatedText';
 import AnimatedBox from '@/Components/AnimatedBox';
@@ -55,7 +53,7 @@ const ArticleId = ({ articles }) => {
 
   return (
     <>
-      <Header />
+      
       <div className="flex flex-col justify-center items-start w-full">
         <div className="row gap-8 p-2 lg:flex lg:me-3">
           {mainArticle && (
@@ -108,7 +106,7 @@ const ArticleId = ({ articles }) => {
           </div>
         </div>
       </div>
-      <Footer />
+  
     </>
   );
 };

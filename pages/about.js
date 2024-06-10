@@ -1,11 +1,10 @@
-import Footer from '@/Components/Footer';
-import Header from '@/Components/Header';
+
 import React from 'react';
 
 const about = () => {
   return (
     <>
-      <Header />
+ 
       <div className="px-8 lg:px-24 py-8 space-y-2 text-justify">
         <h className='text-xl font-semibold uppercase mb-4'>
           ABOUT US
@@ -55,7 +54,7 @@ const about = () => {
           <li className="mb-2">If a student is not able to join the school after a certain vacation due to unforeseen circumstances, the school may consider the case, but an application along with parents’/guardians’ approved signature must be produced upon demand.</li>
         </ul>
       </div>
-      <Footer />
+   
     </>
   );
 }

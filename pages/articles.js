@@ -1,6 +1,4 @@
 
-import Footer from '@/Components/Footer'
-import Header from '@/Components/Header'
 import { Article } from '@/models/article'
 import React from 'react'
 import { mongooseConnect } from "@/lib/mongoose";
@@ -9,9 +7,9 @@ import ArticleComponents from '@/Components/ArticleComponents';
 const articles = ({articles}) => {
   return (
     <>
-   <Header />
+
    <ArticleComponents  articles={articles}/>
-    <Footer />
+  
     </>
   )
 }

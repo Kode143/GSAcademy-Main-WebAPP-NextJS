@@ -1,5 +1,4 @@
-import Footer from '@/Components/Footer'
-import Header from '@/Components/Header'
+
 import { Image } from '@/models/Image';
 import React from 'react'
 import { mongooseConnect } from "@/lib/mongoose";
@@ -8,10 +7,10 @@ import PhotoGallery from '@/Components/PhotoGallery';
 export default function gallery ({images}) {
   return (
      <>
-     <Header />
+
     <PhotoGallery   images={images} />
 
-     <Footer />
+    
      </>
   )
 }
