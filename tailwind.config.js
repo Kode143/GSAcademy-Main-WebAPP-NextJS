@@ -2,8 +2,7 @@
 
 const { fontFamily} = require ('tailwindcss/defaultTheme')
 module.exports = {
-  mode: 'jit', 
-  purge: [
+  content: [
     "./pages/**/*.{html,js}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",

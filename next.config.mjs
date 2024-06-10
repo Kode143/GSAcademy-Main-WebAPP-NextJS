@@ -1,7 +1,5 @@
 // next.config.mjs
 const nextConfig = {
-  optimizeCss: false, 
-  enableBabelRuntime: true, 
   reactStrictMode: true,
   images: {
     remotePatterns: [
