@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { Montserrat } from 'next/font/google'
 import {  useRouter } from "next/router";
+import 'tailwindcss/tailwind.css';
+import 'react-slideshow-image/dist/styles.css';
  
 const montserrat = Montserrat({
   subsets : ["latin"],
