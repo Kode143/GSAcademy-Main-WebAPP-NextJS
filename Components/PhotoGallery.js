@@ -32,9 +32,9 @@ const PhotoGallery = ({ images }) => {
   {images.slice(0, visibleImages).map((image, index) => (
     <AnimatedBox key={index} >
     <div key={index} className="w-full sm:w-auto mx-1 mb-1">
-      <Image height={100} width={300}
+      <Image height={100} width={300} priority
         src={image.secure_url}
-        alt={image.alt}
+        alt='Image'
         onClick={() => openImagePreview(image.secure_url, index)}
         style={{ aspectRatio: `${image.width / image.height}` }}
         className="w-full h-56 object-contain rounded-lg p-1 cursor-pointer"
