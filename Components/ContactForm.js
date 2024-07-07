@@ -148,7 +148,7 @@ const ContactForm = () => {
             </div>
             <div className="flex items-center justify-between">
               <button
-                className="flex w-44 gap-2 bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="flex w-48 gap-2 bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
                 onClick={handleSubmit}
               >

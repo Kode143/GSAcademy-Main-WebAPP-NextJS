@@ -21,7 +21,7 @@ export default function Header() {
         <header className="sticky top-0 bg-white shadow-md z-50 flex items-center justify-between px-4 lg:px-0">
             <div className="flex items-center">
                 <Link href="/">
-                    <Image src="/logo.png" className="w-72 h-28 ms-2" priority alt="Golden Supervision Academy logo" width={600} height={100} />
+                    <Image src="/logo.png" className="w-72 h-20 ms-2 lg:w-72 lg:h-28 " priority alt="Golden Supervision Academy logo" width={600} height={100} />
                 </Link>
             </div>
 
