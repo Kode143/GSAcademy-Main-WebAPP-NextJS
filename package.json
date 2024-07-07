@@ -31,7 +31,6 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5"
   },
-
   "author": "Bhuwan Shrestha <118792877+Kode143@users.noreply.github.com>",
   "license": "MIT"
 }
