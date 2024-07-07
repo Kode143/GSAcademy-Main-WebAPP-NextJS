@@ -13,6 +13,10 @@ export default function Header() {
         setIsOpen(!isOpen);
     };
 
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
+
     const isActive = (path) => {
         return router.pathname === path ? 'bg-blue-400 text-white' : '';
     };
@@ -70,13 +74,13 @@ export default function Header() {
                     className="min-w-[70vw] min-h-[50vh] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg bg-slate-200 py-16"
                 >
                     <nav className="flex items-center flex-col justify-center">
-                        <Link href="/" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/')}`}>HOME</Link>
-                        <Link href="/gallery" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/gallery')}`}>GALLERY</Link>
-                        <Link href="/facilities" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/facilities')}`}>FACILITIES</Link>
-                        <Link href="/events" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/events')}`}>EVENTS</Link>
-                        <Link href="/articles" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/articles')}`}>ARTICLES</Link>
-                        <Link href="/about" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/about')}`}>ABOUT</Link>
-                        <Link href="/contact" className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/contact')}`}>CONTACT</Link>
+                        <Link href="/" onClick={handleLinkClick} className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/')}`}>HOME</Link>
+                        <Link href="/gallery" onClick={handleLinkClick} className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/gallery')}`}>GALLERY</Link>
+                        <Link href="/facilities" onClick={handleLinkClick} className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/facilities')}`}>FACILITIES</Link>
+                        <Link href="/events" onClick={handleLinkClick} className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/events')}`}>EVENTS</Link>
+                        <Link href="/articles" onClick={handleLinkClick} className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/articles')}`}>ARTICLES</Link>
+                        <Link href="/about" onClick={handleLinkClick} className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/about')}`}>ABOUT</Link>
+                        <Link href="/contact" onClick={handleLinkClick} className={`hover:bg-blue-400 hover:text-white p-2 ${isActive('/contact')}`}>CONTACT</Link>
                     </nav>
 
                     <nav className="flex items-center justify-center flex-wrap mt-2">
