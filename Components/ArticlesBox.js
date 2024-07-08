@@ -59,7 +59,7 @@ const ArticlesBox = ({ articles }) => {
                 {isClient && (
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: truncateDescription(convertReactQuillToHTML(articles[0].description), 270),
+                      __html: truncateDescription(convertReactQuillToHTML(articles[0].description), 240),
                     }}
                   />
                 )}
@@ -76,7 +76,7 @@ const ArticlesBox = ({ articles }) => {
                   <Image height={0} width={300} property='high'
                     src={article.images[0].secure_url}
                     alt={article.title}
-                    className="w-full h-auto object-cover transition-transform duration-300 transform hover:scale-105"
+                    className="w-full h-40 object-cover transition-transform duration-300 transform hover:scale-105"
                   />
                   <Link href={`/articles/${article._id}`}>
                     <h3

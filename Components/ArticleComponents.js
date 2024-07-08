@@ -17,7 +17,7 @@ const ArticleComponents = ({ articles }) => {
         <AnimatedBox key={article._id}>
         <div
           key={article._id}
-          className="w-full px-2 mb-3 border border-gray-200 rounded-lg shadow-lg flex hover:bg-slate-100"
+          className="w-full h-full ps-2 mb-3 border border-gray-200 rounded-lg shadow-lg flex hover:bg-slate-100"
         >
           <div className="w-1/2 mb-2 space-y-7">
             <Link href={`/articles/${article._id}`}>

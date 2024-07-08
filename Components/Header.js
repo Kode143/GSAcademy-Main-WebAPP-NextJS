@@ -43,9 +43,9 @@ export default function Header() {
                         <LocationIcon className="w-6 h-6" />
                         <p className="hidden md:block">Chapakot-08, Damachour, Syangja, Nepal</p>
                     </Link>
-                    <Link href="tel:+99454555454445" className="flex items-center gap-2">
+                    <Link href="tel:+9779856013535" className="flex items-center gap-2">
                         <CallIcon className="w-6 h-6" />
-                        <p className="hidden md:block">9800000000, 9800000000</p>
+                        <p className="hidden md:block">9856013535, 9816181433</p>
                     </Link>
                     <Link href="mailto:gsacademy@gmail.com" className="flex items-center gap-2">
                         <MailIcon className="h-6 w-6" />
@@ -92,7 +92,7 @@ export default function Header() {
                             <LocationIcon />
                         </motion.a>
 
-                        <motion.a href="tel:+9800000000" target="_blank" whileHover={{ y: -2 }}
+                        <motion.a href="tel:+9779856013535" target="_blank" whileHover={{ y: -2 }}
                             whileTap={{ scale: 0.9 }}
                             className="w-6 mx-3 sm:mx-1"
                             aria-label="contact info">

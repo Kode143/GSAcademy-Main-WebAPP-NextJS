@@ -3,6 +3,11 @@ import Link from "next/link";
 import { BookIcon, BusIcon, ComputerIcon, GuitarPickIcon, HeartIcon } from './Icons';
 import AnimatedBox from './AnimatedBox';
 
+const truncateText = (text, wordLimit) => {
+    const words = text.split(' ');
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(' ') + '...' : text;
+};
+
 const FacilitiesBox = () => {
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
@@ -26,7 +31,7 @@ const FacilitiesBox = () => {
                         </div>
                         <h1 className={`font-semibold ${isHovered1 ? 'text-white' : 'text-black'}`}>Computer Lab</h1>
                         <p className={isHovered1 ? 'text-white' : 'text-black'}>
-                            Golden Supervision Academy has a high tech computer lab with a reliable networking system.
+                            {truncateText('Golden Supervision Academy has a high tech computer lab with a reliable networking system.', 15)}
                         </p>
                     </div>
                 </Link>
@@ -47,7 +52,7 @@ const FacilitiesBox = () => {
                         </div>
                         <h1 className={`font-semibold ${isHovered4 ? 'text-white' : 'text-black'}`}>Health Care</h1>
                         <p className={isHovered4 ? 'text-white' : 'text-black'}>
-                            Golden Supervision Academy has a high tech computer lab with a reliable networking system.
+                            {truncateText('Your health matters to us because healthy students help our school community succeed!', 15)}
                         </p>
                     </div>
                 </Link>
@@ -68,7 +73,7 @@ const FacilitiesBox = () => {
                         </div>
                         <h1 className={`font-semibold ${isHovered2 ? 'text-white' : 'text-black'}`}>Transportation</h1>
                         <p className={isHovered2 ? 'text-white' : 'text-black'}>
-                            Golden Supervision Academy has a high tech computer lab with a reliable networking system.
+                            {truncateText('Take advantage of our school bus service for a comfortable and safe journey to school, without the hassle of long walks.', 15)}
                         </p>
                     </div>
                 </Link>
@@ -77,7 +82,7 @@ const FacilitiesBox = () => {
             <AnimatedBox>
                 <Link href={'/facilities'}>
                     <div
-                        className='bg-white text-center p-4 shadow-xl rounded-3xl  hover:bg-yellow-500'
+                        className='bg-white text-center p-4 shadow-xl rounded-3xl hover:bg-yellow-500'
                         onMouseEnter={() => setIsHovered3(true)}
                         onMouseLeave={() => setIsHovered3(false)}
                     >
@@ -89,7 +94,7 @@ const FacilitiesBox = () => {
                         </div>
                         <h1 className={`font-semibold ${isHovered3 ? 'text-white' : 'text-black'}`}>Library</h1>
                         <p className={isHovered3 ? 'text-white' : 'text-black'}>
-                            Golden Supervision Academy has a high tech computer lab with a reliable networking system.
+                            {truncateText('Taking library as the repertoire of knowledge and information, GSA has well managed library with adequate stock of textbooks, reference materials, research articles, journals and unlimited internet facility.', 15)}
                         </p>
                     </div>
                 </Link>
