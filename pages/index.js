@@ -4,16 +4,16 @@ import ImageSliders from "@/Components/ImageSliders";
 import WelcomeBox from "@/Components/WelcomeBox";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Slider } from "@/models/slider";
-import ContactForm from "@/Components/ContactForm";
-import ArticlesBox from "@/Components/ArticlesBox";
 
-import MapBox from "@/Components/MapBox";
+import ArticlesBox from "@/Components/ArticlesBox";
 
 import { Article } from "@/models/article";
 import Notice from "@/models/notice";
 import { useState } from "react";
 import NoticeModal from "@/Components/NoticeModal";
 import Head from "next/head";
+import AnimatedRightImage from "@/Components/AnimatedRightImage";
+import MapAndMessage from "@/Components/MapAndMessage";
 
 export default function HomePage({sliders, articles, notice}){
   const selectedArticles = articles.slice(0, 3);
@@ -32,7 +32,7 @@ export default function HomePage({sliders, articles, notice}){
   
     
      <div className="flex flex-col"> 
-        <ImageSliders key={sliders._id} sliders={sliders}  />
+        <ImageSliders  sliders={sliders}  />
         <WelcomeBox />
        <PrincipalMessage/>
        <div className='mt-6'>
@@ -43,17 +43,8 @@ export default function HomePage({sliders, articles, notice}){
  
 </div>
 
-<div className='flex flex-col lg:flex-row justify-around ms-10 mt-4 mb-6 me-4'>
-  <div className='order-2 lg:order-1 flex lg:block'>
-    <div className='w-full lg:w-[650px]'>
-      <MapBox className='w-full lg:w-[650px]' />
-    </div>
-  </div>
-  <div className='order-1 lg:order-2  mb-4 flex mt-3 lg:mt-0 lg:block'>
-    <div className='w-full'>
-      <ContactForm />
-    </div>
-  </div>
+<div>
+  <MapAndMessage />
 </div>
       
       </div>

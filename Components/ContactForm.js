@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { PaperIcon } from './Icons';
 import AnimatedBox from './AnimatedBox';
+import CustomButton from './CustomButton'; // Import the CustomButton component
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const ContactForm = () => {
     message: ''
   });
 
+  const [isLoading, setIsLoading] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const router = useRouter();
 
@@ -35,6 +37,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Set loading to true
 
     try {
       const response = await fetch('/api/contacts', {
@@ -57,14 +60,16 @@ const ContactForm = () => {
       }
     } catch (error) {
       console.error('Error sending form data:', error);
+    } finally {
+      setIsLoading(false); // Set loading to false after submission
     }
   };
 
   return (
     <>
       <AnimatedBox>
-        <div className="flex  justify-center items-center me-2 w-full lg:mt-3">
-          <form className="w-full max-w-md bg-slate-200 shadow-lg rounded px-8 pb-5">
+        <div className="flex justify-center items-center me-2 w-full lg:mt-3">
+          <form className="w-full max-w-md bg-slate-50 bg-opacity-80 shadow-lg rounded px-8 pb-5">
             <h1 className="font-bold text-xl text-center text-blue-800 mt-4 lg:mt-2">Keep In Touch</h1>
             <div className="flex gap-2 mt-2">
               <div className="">
@@ -147,14 +152,14 @@ const ContactForm = () => {
               />
             </div>
             <div className="flex items-center justify-between">
-              <button
-                className="flex w-48 gap-2 bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="button"
+              <CustomButton
+                isLoading={isLoading}
                 onClick={handleSubmit}
+                className="flex w-48 gap-2 bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
-                Send Message
-                <PaperIcon className='h-6' />
-              </button>
+                {isLoading ? "Sending..." : "Send Message"}
+                {!isLoading && <PaperIcon className='h-6' />}
+              </CustomButton>
             </div>
           </form>
           {showSuccessMessage && (

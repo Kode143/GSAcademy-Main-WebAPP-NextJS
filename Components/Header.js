@@ -38,7 +38,7 @@ export default function Header() {
             </div>
 
             <div className="hidden lg:grid lg:grid-rows-7  lg:items-center lg:w-full lg:top-0 lg:justify-end">
-                <div className="row-span-2 flex items-center justify-around text-sm lg:bg-black lg:bg-opacity-5 shadow-md p-1">
+                <div className="row-span-2 flex items-center justify-around text-sm lg:bg-white lg:bg-opacity-50 shadow-md p-1">
                     <Link href="https://maps.app.goo.gl/A4d2BGtvpwWJdkKj9" className="flex items-center gap-2" target="_blank" rel="noopener noreferrer">
                         <LocationIcon className="w-6 h-6" />
                         <p className="hidden md:block">Chapakot-08, Damachour, Syangja, Nepal</p>

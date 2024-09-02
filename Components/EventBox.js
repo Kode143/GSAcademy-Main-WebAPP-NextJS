@@ -7,12 +7,16 @@ const EventBox = ({ events }) => {
     <>
       <div className='flex flex-col items-center '>
       <AnimatedBox>
-      <div className='relative'>
+    
+        
+      <div className='relative lg:w-[1345x] flex lg:h-[550px] '>
           <Image height={300} width={1500}
-            src="/images/event.jpg" // Update the image source for the first card
+            src="/images/cover2.png" // Update the image source for the first card
             alt="Image description" // Add alt text for accessibility
-            className='w-full h-auto'
+            className='w-full h-full object-cover '
+            priority
           />
+             <div className='absolute inset-0 bg-black opacity-50'></div>
           <h1 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-3xl font-bold text-white'>
             Events
           </h1>
@@ -20,7 +24,7 @@ const EventBox = ({ events }) => {
       </AnimatedBox>
     
      
-       <div className='m-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3'>
+       <div className='m-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:ms-28'>
           {events.map(event => (
               <AnimatedBox key={event._id} >
             <div key={event._id} className='bg-gray-100 rounded-lg p-4 shadow-md'>

@@ -34,7 +34,7 @@ const ArticlesBox = ({ articles }) => {
   return (
     <AnimatedBox>
     <div className="flex flex-col bg-slate-200 shadow-lg">
-      <h2 className="ms-8 font-semibold text-lg">Latest Articles Published by our Teachers:</h2>
+      <h2 className="ms-10 lg:ms-12  font-semibold text-base lg:text-lg">Latest Articles Published by our Teachers:</h2>
       <div className="flex flex-col ms-4 px-8 gap-8 lg:flex-row">
         {articles && articles.length > 0 ? (
           <>
@@ -49,13 +49,13 @@ const ArticlesBox = ({ articles }) => {
               />
               <Link href={`/articles/${articles[0]._id}`} className='w-96'>
                 <div
-                  className="text-xl ms-4 font-semibold cursor-pointer hover:underline"
+                  className="text-lg ms-4 font-semibold cursor-pointer hover:underline"
                   style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}
                 >
                   {articles[0].title}
                 </div>
               </Link>
-              <div className="ms-4">
+              <div className="ms-4 text-justify me-3">
                 {isClient && (
                   <div
                     dangerouslySetInnerHTML={{

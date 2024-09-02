@@ -17,7 +17,7 @@ const FacilitiesBox = () => {
     return (
         <div className='grid md:grid-cols-4 gap-6 justify-center ms-4 me-4'>
             <AnimatedBox>
-                <Link href={'/facilities'}>
+                <Link href={'/facilities/computer-lab'}>
                     <div
                         className='bg-white text-center p-4 shadow-xl rounded-3xl hover:bg-red-500 '
                         onMouseEnter={() => setIsHovered1(true)}
@@ -38,7 +38,7 @@ const FacilitiesBox = () => {
             </AnimatedBox>
 
             <AnimatedBox>
-                <Link href={'/facilities'}>
+                <Link href={'/facilities/health-care'}>
                     <div
                         className='bg-white text-center p-4 shadow-xl rounded-3xl hover:bg-green-500'
                         onMouseEnter={() => setIsHovered4(true)}
@@ -59,7 +59,7 @@ const FacilitiesBox = () => {
             </AnimatedBox>
 
             <AnimatedBox>
-                <Link href={'/facilities'}>
+                <Link href={'/facilities/school-bus'}>
                     <div
                         className='bg-white text-center p-4 shadow-xl rounded-3xl hover:bg-blue-500'
                         onMouseEnter={() => setIsHovered2(true)}
@@ -80,7 +80,7 @@ const FacilitiesBox = () => {
             </AnimatedBox>
 
             <AnimatedBox>
-                <Link href={'/facilities'}>
+                <Link href={'/facilities/library'}>
                     <div
                         className='bg-white text-center p-4 shadow-xl rounded-3xl hover:bg-yellow-500'
                         onMouseEnter={() => setIsHovered3(true)}

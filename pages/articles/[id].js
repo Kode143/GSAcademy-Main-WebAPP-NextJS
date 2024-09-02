@@ -65,16 +65,16 @@ const ArticleId = ({ articles }) => {
               </AnimatedBox>
               <div className='flex justify-between'>
                 <AnimatedBox>
-                <h2 className="text-base ms-4">Published by: <span className='font-bold'>{mainArticle.publisher}</span></h2>
+                <h2 className="text-sm ms-0 lg:text-base ">Published by: <span className='font-bold'>{mainArticle.publisher}</span></h2>
                 </AnimatedBox>
-                <div className='flex gap-2'>
+                <div className='flex gap-2 me-0 lg:me-9'>
                   <ClockIcon className='h-4 mt-1' />
                   <AnimatedBox>
                   <h3>{new Date(mainArticle.publishedDate).toLocaleDateString()}</h3>
                   </AnimatedBox>
                 </div>
               </div>
-              <div className="text-gray-700 lg:mb-4 ms-6 me-12 text-justify p-2 lg:p-6" dangerouslySetInnerHTML={{ __html: articleHTML }} />
+              <div className="text-gray-700 lg:mb-4 ms-2 me-4 text-justify p-2 lg:p-6" dangerouslySetInnerHTML={{ __html: articleHTML }} />
             </div>
           )}
 

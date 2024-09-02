@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <>
-      <div className='relative mt-2 bg-gradient-to-r from-blue-300 to-slate-300 lg:bg-none'>
+      <div className='relative  bg-gradient-to-r from-blue-300 to-slate-300 lg:bg-none'>
         <div className='hidden md:block'>
           <WaveIcon />
         </div>
